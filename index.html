@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тур по югу Испании</title>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'SF Pro Display', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glow-button {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .emoji-animate {
+      display: inline-block;
+      animation: floatEmoji 3s ease-in-out infinite;
+    }
+    @keyframes floatEmoji {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .glow-background {
+      animation: backgroundGlow 6s ease-in-out infinite;
+    }
+    @keyframes backgroundGlow {
+      0% { background-color: rgba(0, 0, 0, 0.4); }
+      50% { background-color: rgba(0, 0, 0, 0.55); }
+      100% { background-color: rgba(0, 0, 0, 0.4); }
+    }
+    .modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start text-white px-4 py-6 sm:px-6">
+  <div class="glass p-4 sm:p-5 max-w-full sm:max-w-3xl w-full mb-6 glow-background">
+    <h1 class="text-xl sm:text-2xl font-semibold mb-2 text-center">🇪🇸 Тур по югу Испании:<br />9 дней свободы, вкуса и солнца</h1>
+  </div>
+
+  <div class="space-y-4 sm:space-y-6 max-w-full sm:max-w-3xl w-full">
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">✨</span> <strong>День 1 — Барселона:</strong> Мягкое прибытие, welcome-ужин, знакомство с группой и первый закат у моря.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🌈</span> <strong>День 2 — ЛГБТ-Барселона:</strong> Истории свободы, прогулка по Eixample, пикник на гей-пляже и ночной бар-хоппинг.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🌊</span> <strong>День 3 — Ситжес:</strong> Морской бриз, арт-улицы и приватная прогулка на яхте с фруктами и вином.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🍇</span> <strong>День 4 — Валенсия через винодельню:</strong> Вино среди виноградников, футуристическая архитектура и средиземноморская кухня.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🛺</span> <strong>День 5 — Валенсия:</strong> Тук-тук-тур, шопинг, вечерняя прогулка и аперитив в золотом свете улиц.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🌴</span> <strong>День 6 — Аликанте:</strong> Лёгкий день у моря, набережная, закатный ужин и свободный вечер.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🏞️</span> <strong>День 7 — Cabo de Gata & Малага:</strong> Заповедная природа, белые деревушки, SPA и вечерняя таверна.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">⛰️</span> <strong>День 8 — Андалусия & лодка:</strong> Caminito del Rey, винная деревушка и финальный закат с бокалом на борту.</p></div>
+    <div class="glass glow-background p-5"><p class="text-base sm:text-lg"><span class="emoji-animate">🤍</span> <strong>День 9 — Малага:</strong> Финальная встреча, объятия, прощальные фото и обещание новых путешествий.</p></div>
+
+    <p class="text-center font-light text-sm sm:text-base mt-6">🔑 Этот тур — не просто отпуск. Это — ритм, свобода и атмосфера “своих”.</p>
+
+    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://t.me/your_telegram_contact" target="_blank" class="bg-blue-500 hover:bg-blue-600 transition px-6 py-2 rounded-xl text-white text-center">Связаться в Telegram</a>
+      <button onclick="document.getElementById('bookingModal').classList.remove('hidden')" class="bg-green-500 hover:bg-green-600 transition px-6 py-2 rounded-xl text-white text-center glow-button">Забронировать</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно -->
+  <div id="bookingModal" class="modal hidden">
+    <div class="glass glow-background p-6 w-full max-w-lg relative">
+      <button onclick="document.getElementById('bookingModal').classList.add('hidden')" class="absolute top-4 right-4 text-white text-xl">×</button>
+      <h2 class="text-xl font-semibold mb-4 text-center">📝 Анкета участника</h2>
+      <form action="https://formspree.io/f/mgegrzde" method="POST" class="space-y-4">
+        <input type="text" name="Имя" placeholder="Имя" required class="w-full p-3 rounded-xl bg-white bg-opacity-10 border border-white placeholder-white text-white">
+        <input type="text" name="Фамилия" placeholder="Фамилия" required class="w-full p-3 rounded-xl bg-white bg-opacity-10 border border-white placeholder-white text-white">
+        <input type="text" name="Город" placeholder="Страна/город прибытия" required class="w-full p-3 rounded-xl bg-white bg-opacity-10 border border-white placeholder-white text-white">
+        <input type="number" name="Возраст" placeholder="Возраст" required class="w-full p-3 rounded-xl bg-white bg-opacity-10 border border-white placeholder-white text-white">
+        <textarea name="Увлечения" placeholder="Увлечения" required class="w-full p-3 rounded-xl bg-white bg-opacity-10 border border-white placeholder-white text-white"></textarea>
+        <button type="submit" class="bg-green-500 hover:bg-green-600 transition px-6 py-2 rounded-xl w-full text-white">Отправить</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
